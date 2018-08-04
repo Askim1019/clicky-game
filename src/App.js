@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Board from './components/Board';
+import cards from './cards.json';
 import './App.css';
+import Card from './components/Card';
 
 class App extends Component {
+  state = {
+    cards: cards,
+    currentScore: 0,
+    topScore: 0,
+    clickedCards: [],
+    message: ""
+  }
+
+
+
+
   render() {
     return (
       <div className="container-fluid">
@@ -12,7 +24,15 @@ class App extends Component {
           currentScore={0}
           totalScore={0}
         />
-        <Board />
+        <div className="container">
+          {this.state.cards.map(card => (
+          <Card
+            key={card.id}
+            name={card.name}
+            image={card.image}
+          />
+          ))}
+        </div>
         <Footer />
       </div>
     );
