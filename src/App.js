@@ -8,7 +8,10 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header />
+        <Header 
+          currentScore={0}
+          totalScore={0}
+        />
         <Board />
         <Footer />
       </div>
