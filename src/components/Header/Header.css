@@ -1,0 +1,18 @@
+.header {
+  background-color: #5138a1;
+  color:white;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.header a {
+  color: white;
+}
+
+.score {
+  display: inline-block;
+}
+
+.topScore {
+  display: inline-block;
+}
